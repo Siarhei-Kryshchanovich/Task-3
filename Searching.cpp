@@ -42,9 +42,26 @@ int binarySearch(std::vector<T> vec, T target) {
 }
 
 template<typename T>
-int binarySearchFirst(std::vector<T> vec, T target) {
-    //you need to implement this function using binarySearch function
-    return 1000000;
+int binarySearchFirst(const std::vector<T>& vec, T target) {
+    int left = 0;
+    int right = static_cast<int>(vec.size()) - 1;
+    int result = -1; // Store the index of the first occurrence
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (vec[mid] == target) {
+            result = mid;       // Record the current match
+            right = mid - 1;    // Continue searching in the left half for the first occurrence
+        } 
+        else if (vec[mid] < target) {
+            left = mid + 1;
+        } 
+        else {
+            right = mid - 1;
+        }
+    }
+    return result; // Returns the index of the first occurrence or -1 if not found
 }
 
 template<typename T, std::size_t N>
@@ -67,7 +84,24 @@ int binarySearch(std::array<T, N> arr, T target) {
 }
 
 template<typename T, std::size_t N>
-int binarySearchFirst(std::array<T, N> arr, T target) {
-    //you need to implement this function using binarySearch function
-    return 1000000;
+int binarySearchFirst(const std::array<T, N>& arr, T target) {
+    int left = 0;
+    int right = static_cast<int>(N) - 1;
+    int result = -1; // Store the index of the first occurrence
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] == target) {
+            result = mid;       // Record the current match
+            right = mid - 1;    // Continue searching in the left half for the first occurrence
+        } 
+        else if (arr[mid] < target) {
+            left = mid + 1;
+        } 
+        else {
+            right = mid - 1;
+        }
+    }
+    return result; // Returns the index of the first occurrence or -1 if not found
 }
