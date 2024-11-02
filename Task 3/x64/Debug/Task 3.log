@@ -1,0 +1,13 @@
+﻿  MainApp.cpp
+D:\Учеба\2024-2025\Algorithm and Data stractures\Task 3\MainApp.cpp(9,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+      D:\Учеба\2024-2025\Algorithm and Data stractures\Task 3\MainApp.cpp(9,15):
+      the template instantiation context (the oldest one first) is
+          D:\Учеба\2024-2025\Algorithm and Data stractures\Task 3\MainApp.cpp(34,18):
+          see reference to function template instantiation 'int binarySearch<std::array<int,5>,int>(const Container &,T)' being compiled
+          with
+          [
+              Container=std::array<int,5>,
+              T=int
+          ]
+  
+  Task 3.vcxproj -> D:\Учеба\2024-2025\Algorithm and Data stractures\Task 3\x64\Debug\Task 3.exe
